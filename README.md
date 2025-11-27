@@ -15,6 +15,8 @@ Este projeto consiste em um **Dashboard Interativo** desenvolvido em Python com 
 A escolha do tema foi motivada pelo interesse em desmistificar, de forma lúdica e analítica, os resultados históricos dessa loteria. O dashboard oferece uma visão clara das **dezenas mais (e menos) sorteadas**, bem como a **distribuição geográfica dos grandes prêmios (Sena)**, transformando o palpite em um exercício estatístico e geográfico.
 
 ---
+![imagem](screencapture-localhost-8501-2025-11-26-21_56_55.png)
+---
 
 ## 💾 Fonte de Dados (API)
 
