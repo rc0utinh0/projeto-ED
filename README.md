@@ -1,19 +1,78 @@
-# projeto-ED
+# 💰 Análise de Tendências e Distribuição de Prêmios da Mega-Sena
 
-Projeto Final: Dashboard interativo
-Instruções
-O objetivo deste projeto é que você aplique os principais conceitos de Ciência de Dados básicos para criar uma solução completa, desde a obtenção dos dados até a apresentação de insights e análises relevantes para analisar resultados da loteria mega sena, relacionando os números mais sorteados até os menos sorteados, as cidades premiadas mais vezes, histórico com a frequência de todos os números sorteados, entre outros insights interessantes, Você deverá desenvolver um dashboard Interativo utilizando a biblioteca Streamlit como base de criação da interface, que apresente dados de forma clara e visualmente atraente.
 
-O sistema deverá sugerir jogos com base nos números, alternando metodologias para agrupamentos de numeros mais e menos sorteados, datas históricas dos números sorteados, municipios, ganhadores com 6, 5 e 4 acertos entre outros
+# Claudia Masumi Onizuka
 
-Requisitos funcionais do projeto:
-Seu projeto deve obrigatoriamente incluir os seguintes elementos e tecnologias:
-1 - Conceitos de Ciência de Dados:
-    • Coleta e armazenamento: Uso de API de Dados para obtenção de dados públicos (Ex: dados governamentais, APIs de serviços, etc.).
-    • Armazenamento em arquivo: Os dados obtidos (ou uma versão processada deles) devem ser armazenados localmente em um arquivo (.csv, .json, etc.) antes de serem carregados pelo dashboard.
-    • Processamento/Limpeza de dados: Aplicação de técnicas básicas de limpeza e transformação (filtragem, agregação, criação de novas colunas, etc.).
-    • Análise exploratória e visualização: Geração de gráficos e métricas que ajudem a entender e comunicar os insights do seu tema.
-2 - Interface e dashboard:
-    • Streamlit: A interface do usuário deve ser construída exclusivamente com a biblioteca Streamlit.
-    • Interatividade: O dashboard deve possuir pelo menos dois elementos interativos (Ex: slider, caixa de seleção, dropdown, botão de rádio, etc.) que permitam ao usuário explorar e filtrar os dados dinamicamente.
-    • Layout: O dashboard deve ter um layout organizado, com títulos claros, explicações sobre os gráficos e métricas de destaque (KPIs).
+# Rodrigo Fonseca Coutinho
+
+# Vinicius Negrin Gregorio
+
+
+## 🎯 Tema e Justificativa do Projeto
+
+Este projeto consiste em um **Dashboard Interativo** desenvolvido em Python com a biblioteca Streamlit. O tema é a **Mega-Sena**.
+
+A escolha do tema foi motivada pelo interesse em desmistificar, de forma lúdica e analítica, os resultados históricos dessa loteria. O dashboard oferece uma visão clara das **dezenas mais (e menos) sorteadas**, bem como a **distribuição geográfica dos grandes prêmios (Sena)**, transformando o palpite em um exercício estatístico e geográfico.
+
+---
+
+## 💾 Fonte de Dados (API)
+
+Os dados utilizados neste dashboard são extraídos de uma API pública e não-oficial que consolida os resultados históricos da Caixa Econômica Federal.
+
+* **Fonte da API:** `https://loteriascaixa-api.herokuapp.com/api/megasena`
+* **Descrição dos Dados:** A API fornece o resultado completo de todos os concursos já realizados da Mega-Sena, incluindo:
+    * **Concurso e Data:** Número e data do sorteio.
+    * **Dezenas Sorteadas:** A lista das 6 dezenas vencedoras.
+    * **Local de Ganhadores:** Informações sobre os municípios e estados onde o prêmio principal (Sena) foi acertado.
+
+---
+
+## ❓ Perguntas-Chave Respondidas pelo Dashboard
+
+O painel interativo foi projetado para responder às seguintes questões de análise:
+
+### Frequência de Dezenas
+1.  Quais são as **dezenas mais sorteadas** (dezenas "quentes") e as **menos sorteadas** (dezenas "frias") em toda a história da Mega-Sena?
+2.  Como é a distribuição de frequência de ocorrência de todas as 60 dezenas?
+3.  Com base na frequência histórica, quais são as sugestões de jogos gerados de forma automática?
+
+### Distribuição Geográfica de Prêmios (Sena)
+4.  Qual é o **total de prêmios principais (Sena)** já distribuídos?
+5.  Quais são os **municípios e estados** que registraram o maior número de acertos da Sena?
+6.  Como a distribuição de prêmios se comporta dentro de um **estado específico**, mostrando o ranqueamento das cidades premiadas?
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
+
+Siga os passos abaixo para configurar e executar o dashboard no seu computador.
+
+### Pré-requisitos
+Certifique-se de ter o **Python (versão 3.8+)** e o `pip` (gerenciador de pacotes) instalados.
+
+### 1. Instalação das Dependências
+
+Instale as bibliotecas necessárias usando o `pip`:
+
+```bash
+pip install streamlit pandas requests plotly
+
+```
+
+### 2. Configuração do Arquivo
+Salve o código Python completo fornecido no arquivo anterior como app.py.
+
+### 3. Execução do Dashboard
+Abra o terminal ou prompt de comando na pasta onde você salvou o arquivo app.py e execute o comando Streamlit:
+
+Bash
+```bash
+streamlit run megasenav0.6.py
+```
+O Streamlit irá iniciar o aplicativo e abrir automaticamente uma nova aba no seu navegador padrão, mostrando o dashboard em execução.
+
+Observação sobre Cache
+Na primeira execução, o aplicativo irá baixar e processar todos os dados da API, salvando-os em arquivos CSV locais (megasena_premios_municipios.csv e megasena_dezenas_frequencia.csv). Em execuções subsequentes, o Streamlit usará esses arquivos em cache, acelerando o carregamento. Se quiser forçar o download e reprocessamento, você deve deletar esses arquivos CSV da pasta do projeto.
+
+
