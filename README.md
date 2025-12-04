@@ -36,8 +36,12 @@ O painel interativo foi projetado para responder às seguintes questões de aná
 
 ### Frequência de Dezenas
 1.  Quais são as **dezenas mais sorteadas** (dezenas "quentes") e as **menos sorteadas** (dezenas "frias") em toda a história da Mega-Sena?
-2.  Como é a distribuição de frequência de ocorrência de todas as 60 dezenas?
-3.  Com base na frequência histórica, quais são as sugestões de jogos gerados de forma automática?
+2.  Com base na frequência histórica, quais são as sugestões de jogos gerados de forma automática? Esses conjuntos de sugestões já foram sorteados antes? 
+3.  Como é a distribuição de frequência de ocorrência de todas as 60 dezenas?
+
+### Sugestão de Jogos e Verificação de Repetição
+1. Analisa se entre os conjuntos de 06 dezenas sorteadas nos concursos já houve alguma repetição, ou seja se o conjunto de 06 dezenas sorteadas já foram sorteadas mais de uma vez.
+2. Faz sugetão de jogos aleatórios com as 10 dezenas com mais ocorrência, as 10 com menos ocorrência e misturadas; e após, verifica no historico de sorteios se alguma sugestão já foi sorteada anteriormente.
 
 ### Distribuição Geográfica de Prêmios (Sena)
 4.  Qual é o **total de prêmios principais (Sena)** já distribuídos?
@@ -49,6 +53,8 @@ O painel interativo foi projetado para responder às seguintes questões de aná
 ## 🚀 Como Rodar o Projeto Localmente
 
 Siga os passos abaixo para configurar e executar o dashboard no seu computador.
+Alternativamente o dashboard esta disponivel para visualização em:
+Link: http://megasenaed.ddns.net:8501/
 
 ### Pré-requisitos
 Certifique-se de ter o **Python (versão 3.8+)** e o `pip` (gerenciador de pacotes) instalados.
@@ -63,18 +69,20 @@ pip install streamlit pandas requests plotly
 ```
 
 ### 2. Configuração do Arquivo
-Salve o código Python completo fornecido no arquivo anterior como app.py.
+Para clonar o repositório localmente:
+```bash
+git clone https://github.com/yumyka/projeto-ED
+```
+ou manualmente copie e salve o código Python completo de alguma versão megasenavX.X.py em um arquivo local como por exemplo megasenav0.7.py
 
 ### 3. Execução do Dashboard
-Abra o terminal ou prompt de comando na pasta onde você salvou o arquivo app.py e execute o comando Streamlit:
+Abra o terminal ou prompt de comando na pasta raiz do repositório clonado ou onde você salvou o arquivo .py e execute o comando Streamlit:
 
 Bash
 ```bash
-streamlit run megasenav0.6.py
+streamlit run megasenav0.7.py
 ```
 O Streamlit irá iniciar o aplicativo e abrir automaticamente uma nova aba no seu navegador padrão, mostrando o dashboard em execução.
 
 Observação sobre Cache
 Na primeira execução, o aplicativo irá baixar e processar todos os dados da API, salvando-os em arquivos CSV locais (megasena_premios_municipios.csv e megasena_dezenas_frequencia.csv). Em execuções subsequentes, o Streamlit usará esses arquivos em cache, acelerando o carregamento. Se quiser forçar o download e reprocessamento, você deve deletar esses arquivos CSV da pasta do projeto.
-
-
