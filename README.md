@@ -71,7 +71,7 @@ pip install streamlit pandas requests plotly
 ### 2. Configuração do Arquivo
 Para clonar o repositório localmente:
 ```bash
-git clone https://github.com/yumyka/projeto-ED
+git clone https://github.com/rc0utinh0/projeto-ED
 ```
 ou manualmente copie e salve o código Python completo de alguma versão megasenavX.X.py em um arquivo local como por exemplo megasenav0.7.py
 
