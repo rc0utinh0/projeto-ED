@@ -1,0 +1,14 @@
+Pré-requisitos
+
+Sistema operacional com:
+- Navegador web;
+- Acesso a internet;
+- Python instalado, (certifique-se de ter o Python (versão 3.8+) e o pip (gerenciador de pacotes) instalados);
+
+Bibliotecas necessárias:
+
+streamlit 
+pandas 
+requests 
+plotly
+
